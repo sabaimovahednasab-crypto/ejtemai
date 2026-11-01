@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#3478db">
+  <meta name="description" content="یادگیری مطالعات اجتماعی پایه پنجم">
+  <title>سفر در دنیای اجتماعی</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="logo">🌍</div>
+      <h1>سفر در دنیای اجتماعی</h1>
+      <p>مطالعات اجتماعی پایه پنجم</p>
+      <span class="lesson-tag">درس ۹ | راه‌ها و حمل‌ونقل</span>
+    </header>
+
+    <section id="home" class="panel">
+      <h2>سلام، دانش‌آموز پرتلاش! 👋</h2>
+      <p>آماده‌ای دنیای راه‌ها و وسایل حمل‌ونقل را کشف کنی؟</p>
+      <button onclick="showSection('lesson')">📘 آموزش درس</button>
+      <button class="secondary" onclick="startQuiz()">📝 شروع آزمون</button>
+    </section>
+
+    <section id="lesson" class="panel" hidden>
+      <h2>📚 نکات مهم درس</h2>
+      <div class="fact">🛣️ راه‌های زمینی: جاده و راه‌آهن</div>
+      <div class="fact">🚗 جاده‌ها برای حرکت خودروها استفاده می‌شوند.</div>
+      <div class="fact">🚆 قطار در مسیرهای راه‌آهن حرکت می‌کند.</div>
+      <div class="fact">✈️ هواپیما از راه هوایی استفاده می‌کند.</div>
+      <div class="fact">🚢 کشتی برای جابه‌جایی در آبراه‌ها کاربرد دارد.</div>
+      <button onclick="startQuiz()">حالا آزمون بده ⭐</button>
+      <button class="back" onclick="showSection('home')">بازگشت</button>
+    </section>
+
+    <section id="quiz" class="panel" hidden>
+      <div class="quiz-info">
+        <span id="progress"></span>
+        <span>⭐ امتیاز: <b id="points">0</b></span>
+      </div>
+      <h2 id="question"></h2>
+      <div id="answers"></div>
+      <p id="feedback" aria-live="polite"></p>
+      <button id="next" onclick="nextQuestion()" hidden>سؤال بعدی ←</button>
+    </section>
+
+    <section id="result" class="panel" hidden>
+      <div class="result-icon">🏆</div>
+      <h2>آفرین! آزمون تمام شد.</h2>
+      <p id="score"></p>
+      <button onclick="startQuiz()">🔄 تلاش دوباره</button>
+      <button class="back" onclick="showSection('home')">صفحه اصلی</button>
+    </section>
+
+    <footer>
+      <p>ساخته‌شده برای یادگیری بهتر 💙</p>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
